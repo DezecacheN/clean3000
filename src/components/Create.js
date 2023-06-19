@@ -3,46 +3,64 @@ import Header from './Header'
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import App from '../App'
+import exemples from '../exemples';
 
 
 export default class Create extends Component {
 
     state = {
-        Cards: ""
+        cards: [
+            {
+        
+            }
+        ]
       }
 
+
+      
   printFunction() {
         const name= document.getElementById("name").value;
         const date= document.getElementById("date").value;
         const observ= document.getElementById("observ").value;
         const sign= document.getElementById("sign").value;
 
-        const newCard= [
-            {
+
+
+        const newCard= {
+            
                 id: Date.now(),
                 name: name,
                 date: date,
                 observ: observ,
                 sign: sign
             }
-        ];
+        ;
 
-        const copyCards = [...this.state.Cards];
+        const copyCards = [...this.state.cards];
         copyCards.push(newCard);
 
-        this.setState({
-            Cards: copyCards,
-        })
 
-        console.log(copyCards)
+        // this.setState({
+        //     cards: newCard,
+        // })
+        this.setState({ cards: newCard, }, () => {
+            console.log(this.state);
+            // navigate("/print");
+          }); 
+        
+          console.log(this.state);
+
+
   }
     
 render() {      
+    
+
   return (
     <div class="background">
         <Header />
 
-        <h1 id="title">Avis de Passage</h1>
+        <h1 class="title">Avis de Passage</h1>
 
         <section id="create">
             <form>
@@ -70,10 +88,32 @@ render() {
                 <input type="submit" value="Imprimer l'Avis de Passage" onClick={() => this.printFunction()} />
                 </Link>
 
+
+
+
+                {/* ---------------------------------------------------------- */}
+                {/* boutons de secours */}
+
+
+
+                {/* <Link to={`/print`}>
+                    <p> aller àaiàad</p>
+                </Link>
+
+                <button type="button" onClick={() => this.printFunction()} >dadadadadada</button> */}
+
+
+
+                {/* -------------------------------------------------------- */}
+
             </form>
 
 
         </section>
+
+
+    
+
     </div>
   )
 }
