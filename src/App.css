@@ -1,38 +1,105 @@
-.App {
+/* ----------------------------------------------------------------------- */
+/* body */
+
+body {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  position:absolute;
+  background-image: url("./img/background.jpg");
+  background-size: auto 100%;
+  background-position: center;
+	min-height: 100%;
+	min-width: 100%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ----------------------------------------------------------------------- */
+/* Header */
+
+#header {
+  background-color: rgb(61, 61, 61);
+  padding: 3vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* ------------------------------------------------------------------------ */
+/* Page d'Accueil */
+
+
+
+#homePage {
   display: flex;
-  flex-direction: column;
   align-items: center;
+    justify-content: center;
+    margin: 0 auto
+}
+
+#homePage #createBtn {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  margin-top: 20vh;
+  width: 60vw;
+  height: 20vh;
+
+  border-radius: 20px;
+  background-color: rgb(55, 92, 64);
+  color:white;
+
+  padding: 2vw;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* ------------------------------------------------------------------------ */
+/* Creation avis */
+
+
+#create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#title {
+  margin-top: 5vh;
+}
+
+form {
+  justify-content: center;
+  align-items: center;
+  
+  margin: 5vh;
+  background-color:white;
+  padding: 3vw;
+
+  border-radius: 20px;
+
+
+  width: 80vw;
+}
+
+form input {
+  width: 60vw;
+  height: 5vh;
+  margin-bottom: 5vh;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* Print */
+
+#print {
+  background: white;
+  margin: 1rem;
+}
+
+#logo {
+  background-color: rgb(61, 61, 61);
+  padding: 3vh 6vw;
 }
